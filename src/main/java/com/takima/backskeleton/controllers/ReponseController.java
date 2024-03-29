@@ -1,7 +1,7 @@
 package com.takima.backskeleton.controllers;
 
-import com.takima.backskeleton.models.Course;
-import com.takima.backskeleton.services.CourseService;
+import com.takima.backskeleton.models.Reponse;
+import com.takima.backskeleton.services.ReponseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @CrossOrigin
-@RequestMapping("courses")
+@RequestMapping("reponses")
 @RestController
 @RequiredArgsConstructor
-public class CourseController {
-    private final CourseService courseService;
+public class ReponseController {
+    private final ReponseService reponseService;
 
     @GetMapping("")
-    public List<Course> getAllCourses() {
-        return courseService.findAll();
+    public List<Reponse> getAllCourses() {
+        return reponseService.findAll();
     }
 }
 //

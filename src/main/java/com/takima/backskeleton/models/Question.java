@@ -8,19 +8,18 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Entity
-@Table(name = "majors")
+@Table(name = "questions")
 @Getter
 @NoArgsConstructor
-public class Major {
+public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String name;
-    private String description;
-    @OneToMany(mappedBy = "major")
+    private int id;
+    private String contenu;
+    //private Image image ?
+    @OneToMany(mappedBy = "question")
     @JsonIgnore
-    private List<Student> students;
-
+    private List<Reponse> reponses;
 }
 
 //

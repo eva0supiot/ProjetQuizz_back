@@ -1,25 +1,13 @@
-INSERT INTO majors (id, name, description) VALUES (1, 'Informatique', 'Ouaiiis du code partout');
-INSERT INTO majors (id, name, description) VALUES (2, 'Construction', 'Beaucoup de béton et des poutres');
-INSERT INTO majors (id, name, description) VALUES (3, 'Aéronautique', 'Vive le vent');
-INSERT INTO majors (id, name, description) VALUES (4, 'Data', 'Trop cool plein de données à ordonner');
-INSERT INTO majors (id, name, description) VALUES (5, 'Energie & Environnement', 'On est full green');
-INSERT INTO majors (id, name, description) VALUES (6, 'Management', 'Des managers de qualité');
-INSERT INTO majors (id, name, description) VALUES (7, 'Santé', 'On connait tous les os et tous les muscles du corps humain');
-INSERT INTO majors (id, name, description) VALUES (8, 'Architecture durable', 'Objectif 0 carbone');
-INSERT INTO majors (id, name, description) VALUES (9, 'Design Industriel Durable', 'On resistera à la fin du pétrole');
+INSERT INTO utilisateurs (id, pseudo, mdp, admin, scores, pdp) VALUES (1, 'eva', 'sup00', FALSE, '0', NULL);
+INSERT INTO utilisateurs (id, pseudo, mdp, admin, scores, pdp) VALUES (2, 'dorian', 'cro00', FALSE, '0', NULL);
+INSERT INTO utilisateurs (id, pseudo, mdp, admin, scores, pdp) VALUES (3, 'noriane', 'ber00', TRUE, '0', NULL);
 
-INSERT INTO students (id, first_name, last_name, birthdate, major_id) VALUES (1, 'Paul', 'Harrohide', '2002-06-15', 1);
-INSERT INTO students (id, first_name, last_name, birthdate, major_id) VALUES (2, 'Jean', 'Bonbeur', '2001-08-21', 1);
-INSERT INTO students (id, first_name, last_name, birthdate, major_id) VALUES (3, 'Alain', 'Térieur', '2000-01-11', 1);
+INSERT INTO reponses (id, contenu, solution) VALUES (1, 'France', TRUE);
+INSERT INTO reponses (id, contenu, solution) VALUES (2, 'Pays-Bas', FALSE);
+INSERT INTO reponses (id, contenu, solution) VALUES (3, 'Emmanuel Macron', FALSE);
+INSERT INTO reponses (id, contenu, solution) VALUES (4, 'Anne Hidalgo', TRUE);
 
-INSERT INTO courses (id, name, hours) VALUES (1, 'Spanish', 30);
-INSERT INTO courses (id, name, hours) VALUES (2, 'German', 30);
-INSERT INTO courses (id, name, hours) VALUES (3, 'Internet of Things', 30);
-INSERT INTO courses (id, name, hours) VALUES (4, 'Thermodynamic', 30);
-INSERT INTO courses (id, name, hours) VALUES (5, 'Anatomy', 30);
-INSERT INTO courses (id, name, hours) VALUES (6, 'Maths', 30);
-INSERT INTO courses (id, name, hours) VALUES (7, 'Java', 30);
-INSERT INTO courses (id, name, hours) VALUES (8, 'Lean Management', 30);
-INSERT INTO student_course (id, student_id, course_id) VALUES (1, 1, 7);
+INSERT INTO questions (id, contenu, image, id_reponse1, id_reponse2, id_reponse3, id_reponse4) VALUES (1, 'De quel pays Paris est-elle la capitale ?', NULL, 1, 2, NULL, NULL);
+INSERT INTO questions (id, contenu, image, id_reponse1, id_reponse2, id_reponse3, id_reponse4) VALUES (2, 'Qui est le maire de Paris actuellement ?', NULL, 3, 4, NULL, NULL);
 
-
+INSERT INTO quizzes (id, titre, id_question1, id_question2, id_question3, id_question4, id_question5, id_question6, id_question7, id_question8, id_question9, id_question10) VALUES (1, 'Tout sur Paris !', 1, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);

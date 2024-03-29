@@ -8,18 +8,16 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Entity
-@Table(name = "majors")
+@Table(name = "quizzes")
 @Getter
 @NoArgsConstructor
-public class Major {
+public class Quizz {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String name;
-    private String description;
-    @OneToMany(mappedBy = "major")
+    private int id;
+    private String titre;
+    @OneToMany(mappedBy = "quizz")
     @JsonIgnore
-    private List<Student> students;
-
+    private List<Question> questions;
 }
 

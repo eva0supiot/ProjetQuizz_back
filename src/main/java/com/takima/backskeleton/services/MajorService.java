@@ -24,3 +24,4 @@ public class MajorService {
         return majorDao.getAllStudentsFromMajor(id);
     }
 }
+//

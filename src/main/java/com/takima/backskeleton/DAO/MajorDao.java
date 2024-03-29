@@ -13,3 +13,4 @@ public interface MajorDao extends JpaRepository<Major, Long> {
     @Query("SELECT m.students FROM Major m WHERE m.id= :majorId")
     List<Student> getAllStudentsFromMajor(Long majorId);
 }
+//

@@ -12,3 +12,4 @@ public interface StudentDao extends JpaRepository<Student, Long> {
     @Query("SELECT s FROM Student s JOIN s.courses c WHERE c.id= :courseId AND s.major.id = :majorId ")
     List<Student> findByMajorIdAndCourseId(int majorId, int courseId);
 }
+//

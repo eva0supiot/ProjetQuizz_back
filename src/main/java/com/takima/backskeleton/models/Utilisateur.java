@@ -49,10 +49,6 @@ public class Utilisateur {
             this.mdp = lastName;
             return this;
         }
-        public Builder courses(boolean admin) {
-            this.admin = admin;
-            return this;
-        }
         public Builder scores(String scores) {
             this.scores = scores;
             return this;

@@ -25,4 +25,8 @@ public class QuestionService {
     public void addQuestion(Question question) {
         questionDao.save(question);
     }
+
+    public List<Question> searchByQuizz(int quizzId) {
+        return questionDao.findByQuizzId(quizzId);
+    }
 }

@@ -18,4 +18,9 @@ public class QuestionController {
     public List<Question> findAll() {
         return questionService.findAll();
     }
+
+    @GetMapping("byQuizz")
+    public List<Question> findbyQuizz(@RequestParam Integer quizzId) {
+        return questionService.searchByQuizz(quizzId);
+    }
 }

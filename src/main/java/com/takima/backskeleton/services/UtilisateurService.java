@@ -40,8 +40,8 @@ public class UtilisateurService {
     @Transactional
     public void updateUtilisateur (Utilisateur utilisateur, Long id){
         utilisateurDao.findById(id)
-                .orElseThrow(() -> new NoSuchElementException("Student doesn't exist"));
-        Utilisateur student;
+                .orElseThrow(() -> new NoSuchElementException("User doesn't exist"));
+        //Utilisateur utilisateur;
         utilisateurDao.save(utilisateur);
     }
 }

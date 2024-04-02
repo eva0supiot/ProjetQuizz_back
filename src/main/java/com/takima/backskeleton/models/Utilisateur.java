@@ -18,14 +18,6 @@ public class Utilisateur {
     private boolean admin;
     @Column(name = "scores")
     private String scores;
-    //@ManyToMany
-    /*@JoinTable(
-            name = "student_course",
-            joinColumns = @JoinColumn(name = "student_id"),
-            inverseJoinColumns = @JoinColumn(name = "course_id"))
-    @ManyToOne(cascade = CascadeType.MERGE)*/
-    //@JoinColumn(name = "major_id")
-    //private Major major;
 
     private Utilisateur(Builder builder) {
         this.id = builder.id;

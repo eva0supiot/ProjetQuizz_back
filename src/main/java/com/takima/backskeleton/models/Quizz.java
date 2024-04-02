@@ -20,4 +20,3 @@ public class Quizz {
     @JsonIgnore
     private List<Question> questions;
 }
-

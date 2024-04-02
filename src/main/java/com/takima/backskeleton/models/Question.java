@@ -20,5 +20,8 @@ public class Question {
     @OneToMany(mappedBy = "question")
     @JsonIgnore
     private List<Reponse> reponses;
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "quizz")
+    private Quizz quizz;
 }
 

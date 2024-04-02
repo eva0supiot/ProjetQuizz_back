@@ -14,7 +14,7 @@ import java.util.List;
 public class UtilisateurController {
     private final UtilisateurService utilisateurService;
     @GetMapping("")
-    public List<Utilisateur> listUtilisateurs(@RequestParam(required = false) Integer majorId, @RequestParam(required = false) Integer courseId) {
+    public List<Utilisateur> listUtilisateurs() {
         return utilisateurService.findAll();
     }
 

@@ -9,6 +9,6 @@ import java.util.List;
 
 @Repository
 public interface UtilisateurDao extends JpaRepository<Utilisateur, Long> {
-    @Query("SELECT s FROM utilisateurs s JOIN s.courses c WHERE c.id= :courseId AND s.major.id = :majorId ")
-    List<Utilisateur> findByMajorIdAndCourseId(int majorId, int courseId);
+    //@Query("SELECT u FROM utilisateurs u JOIN u.courses c WHERE c.id= :courseId AND u.major.id = :majorId ")
+    //List<Utilisateur> findByMajorIdAndCourseId(int majorId, int courseId);
 }

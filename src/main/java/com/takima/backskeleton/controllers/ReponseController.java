@@ -18,7 +18,7 @@ public class ReponseController {
     private final ReponseService reponseService;
 
     @GetMapping("")
-    public List<Reponse> getAllCourses() {
+    public List<Reponse> getAllReponses() {
         return reponseService.findAll();
     }
 }

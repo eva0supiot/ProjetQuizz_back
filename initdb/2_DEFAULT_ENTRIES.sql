@@ -8,7 +8,7 @@ INSERT INTO reponses (id, contenu, solution, question_id) VALUES (3, 'Emmanuel M
 INSERT INTO reponses (id, contenu, solution, question_id) VALUES (4, 'Anne Hidalgo', TRUE, 2);
 INSERT INTO reponses (id, contenu, solution, question_id) VALUES (5, 'Tour Eiffel', FALSE, 3);
 INSERT INTO reponses (id, contenu, solution, question_id) VALUES (6, 'Arc de Triomphe', False, 3);
-INSERT INTO reponses (id, contenu, solution, question_id) VALUES (7, 'Palais de l Elysée', FALSE, 3);
+INSERT INTO reponses (id, contenu, solution, question_id) VALUES (7, 'Palais de lElysée', FALSE, 3);
 INSERT INTO reponses (id, contenu, solution, question_id) VALUES (8, 'Sagradafamilia', TRUE, 3);
 INSERT INTO reponses (id, contenu, solution, question_id) VALUES (9, 'La Tamise', True, 4);
 INSERT INTO reponses (id, contenu, solution, question_id) VALUES (10, 'La Seine', False, 4);

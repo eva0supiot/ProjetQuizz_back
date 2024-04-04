@@ -1,12 +1,10 @@
 package com.takima.backskeleton.controllers;
 
+import com.takima.backskeleton.models.Question;
 import com.takima.backskeleton.models.Reponse;
 import com.takima.backskeleton.services.ReponseService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,5 +19,9 @@ public class ReponseController {
     public List<Reponse> getAllReponses() {
         return reponseService.findAll();
     }
+
+    @GetMapping("byQuestion")
+    public List<Reponse> findbyQuestion(@RequestParam Integer questionId) {
+        return reponseService.searchByQuestion(questionId);
+    }
 }
-//

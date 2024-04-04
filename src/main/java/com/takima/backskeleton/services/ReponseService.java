@@ -1,6 +1,7 @@
 package com.takima.backskeleton.services;
 
 import com.takima.backskeleton.DAO.ReponseDao;
+import com.takima.backskeleton.models.Question;
 import com.takima.backskeleton.models.Reponse;
 import com.takima.backskeleton.models.Utilisateur;
 import lombok.RequiredArgsConstructor;
@@ -21,5 +22,9 @@ public class ReponseService {
     @Transactional
     public void addReponse(Reponse reponse) {
         reponseDao.save(reponse);
+    }
+
+    public List<Reponse> searchByQuestion(int questionId) {
+        return reponseDao.findByQuestionId(questionId);
     }
 }

@@ -20,6 +20,9 @@ public class QuizzService {
         it.forEach(quizzes::add);
         return quizzes;
     }
+    public Quizz findById(Integer id) {
+        return quizzDao.findById(id).orElseThrow(() -> new RuntimeException("No quizz with this id"));
+    }
 
     @Transactional
     public void addQuizz(Quizz quizz) {

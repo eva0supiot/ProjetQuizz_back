@@ -18,4 +18,9 @@ public class QuizzController {
     public List<Quizz> findAll() {
         return quizzService.findAll();
     }
+
+    @GetMapping("/{id}")
+    public Quizz findById(@PathVariable Integer id) {
+        return quizzService.findById(id);
+    }
 }

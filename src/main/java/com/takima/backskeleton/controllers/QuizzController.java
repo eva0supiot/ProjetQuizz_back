@@ -1,6 +1,7 @@
 package com.takima.backskeleton.controllers;
 
 import com.takima.backskeleton.models.Quizz;
+import com.takima.backskeleton.models.Utilisateur;
 import com.takima.backskeleton.services.QuizzService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -17,5 +18,25 @@ public class QuizzController {
     @GetMapping("")
     public List<Quizz> findAll() {
         return quizzService.findAll();
+    }
+
+    @GetMapping("/{id}")
+    public Quizz getQuizzById(@PathVariable Long id) {
+        return quizzService.getById(id);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteQuizz(@PathVariable Long id) {
+        quizzService.deleteById(id);
+    }
+
+    @PostMapping("")
+    public void addQuizz(@RequestBody Quizz quizz) {
+        quizzService.addQuizz(quizz);
+    }
+
+    @PostMapping("/{id}")
+    public void updateUtilisateur(@RequestBody Quizz quizz, @PathVariable Long id) {
+        quizzService.updateQuizz(quizz, id);
     }
 }

@@ -24,4 +24,18 @@ public class ReponseController {
     public List<Reponse> findbyQuestion(@RequestParam Integer questionId) {
         return reponseService.searchByQuestion(questionId);
     }
+    @DeleteMapping("/{id}")
+    public void deleteReponse(@PathVariable Long id) {
+        reponseService.deleteById(id);
+    }
+
+    @PostMapping("")
+    public void addReponse(@RequestBody Reponse reponse) {
+        reponseService.addReponse(reponse);
+    }
+
+    @PostMapping("/{id}")
+    public void updateReponse(@RequestBody Reponse reponse, @PathVariable Long id) {
+        reponseService.updateReponse(reponse, id);
+    }
 }

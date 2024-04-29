@@ -37,4 +37,5 @@ public class UtilisateurController {
     public void updateUtilisateur(@RequestBody Utilisateur utilisateur, @PathVariable Long id) {
         utilisateurService.updateUtilisateur(utilisateur, id);
     }
+
 }

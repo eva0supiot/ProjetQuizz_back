@@ -10,7 +10,6 @@ import java.util.List;
 @Entity
 @Table(name = "questions")
 @Getter
-@NoArgsConstructor
 public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +22,34 @@ public class Question {
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "quizz_id")
     private Quizz quizz;
+
+    private Question(Question.Builder builder) {
+        this.id = Math.toIntExact(builder.id);
+        this.contenu = builder.contenu;
+    }
+    public Question() {
+    }
+
+    public static class Builder {
+        private Long id;
+        private String contenu;
+
+
+        public Question.Builder id(Long id) {
+            this.id = id;
+            return this;
+        }
+
+        public Question.Builder contenu(String name) {
+            this.contenu = name;
+            return this;
+        }
+
+
+        public Question build() {
+            return new Question(this);
+        }
+    }
 }
 
 //

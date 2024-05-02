@@ -1,4 +1,4 @@
-INSERT INTO utilisateurs (id, pseudo, mdp, admin, scores, pdp) VALUES (1, 'eva', 'sup00', FALSE, '0', NULL);
+INSERT INTO utilisateurs (id, pseudo, mdp, admin, scores, pdp) VALUES (1, 'eva', 'sup00', FALSE, '1:3/3-2:0/1', NULL);
 INSERT INTO utilisateurs (id, pseudo, mdp, admin, scores, pdp) VALUES (2, 'dorian', 'cro00', FALSE, '0', NULL);
 INSERT INTO utilisateurs (id, pseudo, mdp, admin, scores, pdp) VALUES (3, 'noriane', 'ber00', TRUE, '0', NULL);
 

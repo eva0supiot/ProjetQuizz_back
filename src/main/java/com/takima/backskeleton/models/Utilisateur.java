@@ -2,6 +2,7 @@ package com.takima.backskeleton.models;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "utilisateurs")
@@ -16,6 +17,7 @@ public class Utilisateur {
     private String mdp;
     @Column(name = "admin")
     private boolean admin;
+    @Setter
     @Column(name = "scores")
     private String scores;
 

@@ -19,11 +19,6 @@ public class QuizzController {
         return quizzService.findAll();
     }
 
-    @GetMapping("/{id}")
-    public Quizz getQuizzById(@PathVariable Long id) {
-        return quizzService.getById(id);
-    }
-
     @DeleteMapping("/{id}")
     public void deleteQuizz(@PathVariable Long id) {
         quizzService.deleteById(id);
@@ -35,7 +30,7 @@ public class QuizzController {
     }
 
     @PostMapping("/{id}")
-    public void updateUtilisateur(@RequestBody Quizz quizz, @PathVariable Long id) {
+    public void updateQuizz(@RequestBody Quizz quizz, @PathVariable Long id) {
         quizzService.updateQuizz(quizz, id);
     }
 

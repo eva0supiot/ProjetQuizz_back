@@ -26,6 +26,7 @@ public class QuizzService {
         return quizzDao.findById(id).orElseThrow(() -> new RuntimeException("No quizz with this id"));
     }
 
+
     public Quizz getById(Long id) {
         return quizzDao.findById(Math.toIntExact(id)).orElseThrow();
     }

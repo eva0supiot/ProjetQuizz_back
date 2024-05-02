@@ -23,9 +23,9 @@ public class QuestionService {
         return questions;
     }
 
-    public List<Question> searchByQuizz(int quizzId) {
-        return questionDao.findByQuizzId(quizzId);
-    }
+    //public List<Question> searchByQuizz(int quizzId) {
+        //return questionDao.findByQuizzId(quizzId);
+    //}
 
     @Transactional
     public void deleteById(Long id) {
@@ -33,8 +33,8 @@ public class QuestionService {
     }
 
     @Transactional
-    public void addQuestion(Question question) {
-        questionDao.save(question);
+    public Question addQuestion(Question question) {
+        return questionDao.save(question);
     }
 
     @Transactional
@@ -43,5 +43,9 @@ public class QuestionService {
                 .orElseThrow(() -> new NoSuchElementException("Quizz doesn't exist"));
         //Utilisateur utilisateur;
         questionDao.save(question);
+    }
+
+    public List<Question> searchByQuizz(Integer quizzId) {
+        return null;
     }
 }

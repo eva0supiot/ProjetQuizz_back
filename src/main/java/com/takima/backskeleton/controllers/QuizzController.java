@@ -19,6 +19,21 @@ public class QuizzController {
         return quizzService.findAll();
     }
 
+    @DeleteMapping("/{id}")
+    public void deleteQuizz(@PathVariable Long id) {
+        quizzService.deleteById(id);
+    }
+
+    @PostMapping("")
+    public void addQuizz(@RequestBody Quizz quizz) {
+        quizzService.addQuizz(quizz);
+    }
+
+    @PostMapping("/{id}")
+    public void updateQuizz(@RequestBody Quizz quizz, @PathVariable Long id) {
+        quizzService.updateQuizz(quizz, id);
+    }
+
     @GetMapping("/{id}")
     public Quizz findById(@PathVariable Integer id) {
         return quizzService.findById(id);

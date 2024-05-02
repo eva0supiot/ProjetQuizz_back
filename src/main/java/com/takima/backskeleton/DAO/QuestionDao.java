@@ -10,6 +10,6 @@ import java.util.List;
 
 @Repository
 public interface QuestionDao extends JpaRepository<Question, Integer> {
-    @Query("SELECT qst FROM Question qst WHERE qst.quizz.id= :quizzId")
-    List<Question> findByQuizzId(int quizzId);
+    //@Query("SELECT qst FROM Question qst WHERE qst.quizz.id= :quizzId")
+    //List<Question> findByQuizzId(int quizzId);
 }

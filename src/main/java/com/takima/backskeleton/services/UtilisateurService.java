@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -47,27 +48,6 @@ public class UtilisateurService {
         utilisateurDao.save(utilisateur);
     }
 
-    /*public void saveScore(Long id, String newscore) {
-        utilisateurDao.findById(id)
-                .orElseThrow(() -> new NoSuchElementException("User doesn't exist"));
-        Utilisateur user = utilisateurDao.getById(id);
-        user.setScores(user.getScores()+newscore);
-        utilisateurDao.save(user);
-    }
-
-    @Transactional
-    public void saveScores(Long id, String newScore) {
-        // Recherche de l'utilisateur par ID
-        Utilisateur utilisateur = utilisateurDao.findById(id)
-                .orElseThrow(() -> new NoSuchElementException("Utilisateur non trouvé"));
-
-        // Mettre à jour le score de l'utilisateur avec la nouvelle valeur
-        utilisateur.setScores(newScore);
-
-        // Sauvegarde de l'utilisateur mis à jour dans la base de données
-        utilisateurDao.save(utilisateur);
-    }*/
-
     public void saveScore(Long id, String newScore) {
         Utilisateur user = utilisateurDao.findById(id)
                 .orElseThrow(() -> new NoSuchElementException("User doesn't exist"));
@@ -75,5 +55,4 @@ public class UtilisateurService {
         user.setScores(user.getScores()+"-"+newScore);
         utilisateurDao.save(user);
     }
-
 }

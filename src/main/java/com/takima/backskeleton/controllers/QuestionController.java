@@ -31,8 +31,8 @@ public class QuestionController {
     }
 
     @PostMapping("")
-    public Question addQuestion(@RequestBody Question question) {
-        return questionService.addQuestion(question);
+    public void addQuestion(@RequestBody Question question) {
+        questionService.addQuestion(question);
     }
     @PostMapping("/{id}")
     public void updateQuestion(@RequestBody Question question, @PathVariable Long id) {

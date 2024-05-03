@@ -33,8 +33,8 @@ public class QuestionService {
     }
 
     @Transactional
-    public Question addQuestion(Question question) {
-        return questionDao.save(question);
+    public void addQuestion(Question question) {
+        questionDao.save(question);
     }
 
     @Transactional

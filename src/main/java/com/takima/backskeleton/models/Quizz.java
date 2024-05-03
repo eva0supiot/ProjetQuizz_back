@@ -5,7 +5,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "quizzes")
@@ -13,37 +15,11 @@ import java.util.List;
 public class Quizz {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
+
+    @Column(nullable = false)
     private String titre;
-    @OneToMany(mappedBy = "quizz")
-    @JsonIgnore
-    private List<Question> questions;
 
-    private Quizz(Quizz.Builder builder) {
-        this.id = builder.id;
-        this.titre = builder.titre;
-    }
-    public Quizz() {
-    }
-
-    public static class Builder {
-        private Long id;
-        private String titre;
-
-
-        public Quizz.Builder id(Long id) {
-            this.id = id;
-            return this;
-        }
-
-        public Quizz.Builder titre(String name) {
-            this.titre = name;
-            return this;
-        }
-
-
-        public Quizz build() {
-            return new Quizz(this);
-        }
-    }
+    @OneToMany(mappedBy = "quizz", cascade = CascadeType.ALL)
+    private Set<Question> questions = new HashSet<>();
 }

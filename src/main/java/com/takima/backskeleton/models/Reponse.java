@@ -14,45 +14,15 @@ import java.util.List;
 public class Reponse {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
+
+    @Column(nullable = false)
     private String contenu;
-    private boolean solution;
-    @ManyToOne(cascade = CascadeType.MERGE)
+
+    @Column(nullable = false)
+    private boolean correct;
+
+    @ManyToOne
     @JoinColumn(name = "question_id")
     private Question question;
-
-    private Reponse(Reponse.Builder builder) {
-        this.id = Math.toIntExact(builder.id);
-        this.contenu = builder.contenu;
-        this.solution=builder.solution;
-    }
-    public Reponse() {
-    }
-
-    public static class Builder {
-        private Long id;
-        private String contenu;
-        private boolean solution;
-
-
-        public Reponse.Builder id(Long id) {
-            this.id = id;
-            return this;
-        }
-
-        public Reponse.Builder contenu(String name) {
-            this.contenu = name;
-            return this;
-        }
-
-        public Reponse.Builder solution(boolean sol) {
-            this.solution = sol;
-            return this;
-        }
-
-
-        public Reponse build() {
-            return new Reponse(this);
-        }
-    }
 }

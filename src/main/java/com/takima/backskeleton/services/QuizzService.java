@@ -37,8 +37,8 @@ public class QuizzService {
     }
 
     @Transactional
-    public void addQuizz(Quizz quizz) {
-        quizzDao.save(quizz);
+    public Quizz addQuizz(Quizz quizz) {
+        return quizzDao.save(quizz);
     }
 
     @Transactional

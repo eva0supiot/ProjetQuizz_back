@@ -3,6 +3,7 @@ package com.takima.backskeleton.controllers;
 import com.takima.backskeleton.models.Quizz;
 import com.takima.backskeleton.services.QuizzService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,8 +26,9 @@ public class QuizzController {
     }
 
     @PostMapping("")
-    public void addQuizz(@RequestBody Quizz quizz) {
-        quizzService.addQuizz(quizz);
+    public ResponseEntity<Quizz> addQuizz(@RequestBody Quizz quizz) {
+        Quizz newQuizz = quizzService.addQuizz(quizz);
+        return ResponseEntity.ok().body(newQuizz);
     }
 
     @PostMapping("/{id}")

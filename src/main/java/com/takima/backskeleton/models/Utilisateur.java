@@ -20,6 +20,8 @@ public class Utilisateur {
     @Setter
     @Column(name = "scores")
     private String scores;
+    @Column(name = "pdp")
+    private String pdp;
 
     private Utilisateur(Builder builder) {
         this.id = builder.id;
@@ -27,6 +29,7 @@ public class Utilisateur {
         this.mdp = builder.mdp;
         this.admin = builder.admin;
         this.scores = builder.scores;
+        this.pdp = builder.pdp;
     }
     public Utilisateur() {
     }
@@ -37,6 +40,8 @@ public class Utilisateur {
         private String mdp;
         private boolean admin;
         private String scores;
+
+        private String pdp;
 
         public Builder id (Long id) {
             this.id = id;
@@ -53,6 +58,11 @@ public class Utilisateur {
         }
         public Builder scores(String scores) {
             this.scores = scores;
+            return this;
+        }
+
+        public Builder pdp(String pdp) {
+            this.pdp = pdp;
             return this;
         }
 

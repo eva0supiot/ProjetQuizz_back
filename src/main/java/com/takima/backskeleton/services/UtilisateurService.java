@@ -9,10 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 @RequiredArgsConstructor
@@ -51,8 +48,11 @@ public class UtilisateurService {
     public void saveScore(Long id, String newScore) {
         Utilisateur user = utilisateurDao.findById(id)
                 .orElseThrow(() -> new NoSuchElementException("User doesn't exist"));
-        // Traitement de la nouvelle valeur de score selon vos besoins
-        user.setScores(user.getScores()+"-"+newScore);
+
+        if(Objects.equals(user.getScores(), "0"))
+            user.setScores(newScore);
+        else
+            user.setScores(user.getScores()+"-"+newScore);
         utilisateurDao.save(user);
     }
 }

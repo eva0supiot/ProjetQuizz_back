@@ -24,8 +24,8 @@ public class Question {
     @JoinColumn(name = "quizz_id")
     private Quizz quizz;
 
-    @OneToMany(mappedBy = "question", cascade = CascadeType.ALL)
-    private Set<Reponse> reponses = new HashSet<>();
+    //@OneToMany(mappedBy = "question", cascade = CascadeType.ALL)
+    //private Set<Reponse> reponses = new HashSet<>();
 /*
     private Question(Question.Builder builder) {
         this.id = Math.toIntExact(builder.id);

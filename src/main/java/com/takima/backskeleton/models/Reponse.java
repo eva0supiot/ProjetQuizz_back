@@ -20,7 +20,7 @@ public class Reponse {
     private String contenu;
 
     @Column(nullable = false)
-    private boolean correct;
+    private boolean solution;
 
     @ManyToOne
     @JoinColumn(name = "question_id")

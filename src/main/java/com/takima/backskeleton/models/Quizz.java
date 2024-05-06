@@ -20,6 +20,6 @@ public class Quizz {
     @Column(nullable = false)
     private String titre;
 
-    @OneToMany(mappedBy = "quizz", cascade = CascadeType.ALL)
-    private Set<Question> questions = new HashSet<>();
+    //@OneToMany(mappedBy = "quizz", cascade = CascadeType.ALL)
+    //private Set<Question> questions = new HashSet<>();
 }

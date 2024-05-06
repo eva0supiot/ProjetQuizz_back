@@ -5,7 +5,7 @@ create table utilisateurs
     mdp VARCHAR(64) not null,
     admin BOOL not null,
     scores VARCHAR(256) not null,
-    pdp BYTEA null
+    pdp VARCHAR(64) null
 );
 
 create table reponses

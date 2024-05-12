@@ -20,12 +20,12 @@ create table questions
 (
     id SERIAL PRIMARY KEY,
     contenu VARCHAR(256) not null,
-    image BYTEA null,
     quizz_id INT not null
 );
 
 create table quizzes
 (
     id SERIAL PRIMARY KEY,
-    titre VARCHAR(64) not null
+    titre VARCHAR(64) not null,
+    image VARCHAR(64) null
 );

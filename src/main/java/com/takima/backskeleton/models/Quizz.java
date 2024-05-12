@@ -20,6 +20,9 @@ public class Quizz {
     @Column(nullable = false)
     private String titre;
 
+    @Column(name = "image")
+    private String image;
+
     //@OneToMany(mappedBy = "quizz", cascade = CascadeType.ALL)
     //private Set<Question> questions = new HashSet<>();
 }

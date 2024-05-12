@@ -68,33 +68,33 @@ INSERT INTO reponses (contenu, solution, question_id) VALUES ('Les Nouveaux Hér
 
 
 
-INSERT INTO questions (contenu, image, quizz_id) VALUES ('De quel pays Paris est-elle la capitale ?', NULL, 1);
-INSERT INTO questions (contenu, image, quizz_id) VALUES ('Qui est le maire de Paris actuellement ?', NULL, 1);
-INSERT INTO questions (contenu, image, quizz_id) VALUES ('Lequel de ces monuments ne se trouve pas à Paris ?', NULL, 1);
+INSERT INTO questions (contenu, quizz_id) VALUES ('De quel pays Paris est-elle la capitale ?', 1);
+INSERT INTO questions (contenu, quizz_id) VALUES ('Qui est le maire de Paris actuellement ?', 1);
+INSERT INTO questions (contenu, quizz_id) VALUES ('Lequel de ces monuments ne se trouve pas à Paris ?', 1);
 
-INSERT INTO questions (contenu, image, quizz_id) VALUES ('Quel est le nom du fleuve qui traverse Londres ?', NULL, 2);
+INSERT INTO questions (contenu, quizz_id) VALUES ('Quel est le nom du fleuve qui traverse Londres ?', 2);
 
-INSERT INTO questions (contenu, image, quizz_id) VALUES ('Quel film avec Leonardo DiCaprio se déroule sur un bâteau entrant en collision avec un iceberg ?', NULL, 3);
-INSERT INTO questions (contenu, image, quizz_id) VALUES ('Quel film français avec Omar Sy traite d une rencontre improbable entre un homme tétraplégique et un jeune de banlieue ?', NULL, 3);
-INSERT INTO questions (contenu, image, quizz_id) VALUES ('Quel film traite du décryptage de la machine Enigma, emblématique de la Seconde Guerre Modiale ?', NULL, 3);
-INSERT INTO questions (contenu, image, quizz_id) VALUES ('Quel film d horreur a pour antagoniste principal un clown ?', NULL, 3);
-INSERT INTO questions (contenu, image, quizz_id) VALUES ('Quel film traite de la rencontre entre une prostituée et un millionnaire ?', NULL, 3);
+INSERT INTO questions (contenu, quizz_id) VALUES ('Quel film avec Leonardo DiCaprio se déroule sur un bâteau entrant en collision avec un iceberg ?', 3);
+INSERT INTO questions (contenu, quizz_id) VALUES ('Quel film français avec Omar Sy traite d une rencontre improbable entre un homme tétraplégique et un jeune de banlieue ?', 3);
+INSERT INTO questions (contenu, quizz_id) VALUES ('Quel film traite du décryptage de la machine Enigma, emblématique de la Seconde Guerre Modiale ?', 3);
+INSERT INTO questions (contenu, quizz_id) VALUES ('Quel film d horreur a pour antagoniste principal un clown ?', 3);
+INSERT INTO questions (contenu, quizz_id) VALUES ('Quel film traite de la rencontre entre une prostituée et un millionnaire ?', 3);
 
-INSERT INTO questions (contenu, image, quizz_id) VALUES ('Quelle race de chien est le plus souvent employée en chiens de berger ?', NULL, 4);
-INSERT INTO questions (contenu, image, quizz_id) VALUES ('Quelle fut la race de chien la plus adoptée en France en 2021 ?', NULL, 4);
-INSERT INTO questions (contenu, image, quizz_id) VALUES ('Laquelle de ces race de chien est la plus adaptée à la course ?', NULL, 4);
-INSERT INTO questions (contenu, image, quizz_id) VALUES ('Quelle est la race de chien considérée comme la plus adaptée à la vie de famille ?', NULL, 4);
-INSERT INTO questions (contenu, image, quizz_id) VALUES ('Quels sont les chiens les plus grands du monde ?', NULL, 4);
+INSERT INTO questions (contenu, quizz_id) VALUES ('Quelle race de chien est le plus souvent employée en chiens de berger ?', 4);
+INSERT INTO questions (contenu, quizz_id) VALUES ('Quelle fut la race de chien la plus adoptée en France en 2021 ?', 4);
+INSERT INTO questions (contenu, quizz_id) VALUES ('Laquelle de ces race de chien est la plus adaptée à la course ?', 4);
+INSERT INTO questions (contenu, quizz_id) VALUES ('Quelle est la race de chien considérée comme la plus adaptée à la vie de famille ?', 4);
+INSERT INTO questions (contenu, quizz_id) VALUES ('Quels sont les chiens les plus grands du monde ?', 4);
 
-INSERT INTO questions (contenu, image, quizz_id) VALUES ('Quel fut le premier Disney avec un personnage ouvertement homosexuel ?', NULL, 5);
-INSERT INTO questions (contenu, image, quizz_id) VALUES ('Quel film Disney s inspire librement de la mythologie polynésienne ?', NULL, 5);
-INSERT INTO questions (contenu, image, quizz_id) VALUES ('Dans quel film Disney une princesse doit-elle rompre un terrible sort s étant abattu sur sa mère ?', NULL, 5);
-INSERT INTO questions (contenu, image, quizz_id) VALUES ('De quel film provient la scène culte de la dégustation de spagetti ?', NULL, 5);
-INSERT INTO questions (contenu, image, quizz_id) VALUES ('Quel film Disney provient la phrase "Je suis satisfait de mes soins." ?', NULL, 5);
+INSERT INTO questions (contenu, quizz_id) VALUES ('Quel fut le premier Disney avec un personnage ouvertement homosexuel ?', 5);
+INSERT INTO questions (contenu, quizz_id) VALUES ('Quel film Disney s inspire librement de la mythologie polynésienne ?', 5);
+INSERT INTO questions (contenu, quizz_id) VALUES ('Dans quel film Disney une princesse doit-elle rompre un terrible sort s étant abattu sur sa mère ?', 5);
+INSERT INTO questions (contenu, quizz_id) VALUES ('De quel film provient la scène culte de la dégustation de spagetti ?', 5);
+INSERT INTO questions (contenu, quizz_id) VALUES ('Quel film Disney provient la phrase "Je suis satisfait de mes soins." ?', 5);
 
 
-INSERT INTO quizzes (titre) VALUES ('Tout sur Paris !');
-INSERT INTO quizzes (titre) VALUES ('Tout sur Londres !');
-INSERT INTO quizzes (titre) VALUES ('Culture film !');
-INSERT INTO quizzes (titre) VALUES ('Les races de chiens !');
-INSERT INTO quizzes (titre) VALUES ('Les films Disney !');
+INSERT INTO quizzes (titre, image) VALUES ('Tout sur Paris !', 'monde');
+INSERT INTO quizzes (titre, image) VALUES ('Tout sur Londres !', 'monde');
+INSERT INTO quizzes (titre, image) VALUES ('Culture film !', 'histoire_culture');
+INSERT INTO quizzes (titre, image) VALUES ('Les races de chiens !', 'nature');
+INSERT INTO quizzes (titre, image) VALUES ('Les films Disney !', 'divertissements');
